@@ -7,7 +7,7 @@ Sounds good as a student project
 
 With the modified output including the "probability of mutating gene X in patient Y"
 
-Usage:   
+Usage (here breaking lines to show some clarity, don't break when actually run them):   
 ```
 /cellar/local/matlab_linux64_R2016b/bin/matlab
  -nodisplay -nojvm -r 
@@ -21,7 +21,16 @@ quit"
 ```
 The input is a MAF file (e.g. `blca.maf`), which calls MutSigCV from MATLAB. `output` above specify an output directory. Other files are really big so there are not here but on the lab server. In the output directory there will be a file ending with "p1gp", which is the per-patient probability we are looking for.
 
-**TODO: add the links of other files here**
+### Original website
+https://software.broadinstitute.org/cancer/cga/mutsig
+
+
+### the links of other files here
+
+`/cellar/users/f6zheng/work_2020_2/nest_confirmatory/n4wilson/mutsigcv_files` (contains coverage, covariates and dictionary)
+`/cellar/users/f6zheng/Data/Public_data/chr_files_hg19`
+
+
 
 # Obtaining the MAF files
 
