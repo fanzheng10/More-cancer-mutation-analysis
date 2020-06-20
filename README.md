@@ -30,6 +30,8 @@ https://software.broadinstitute.org/cancer/cga/mutsig
 `/cellar/users/f6zheng/work_2020_2/nest_confirmatory/n4wilson/mutsigcv_files` (contains coverage, covariates and dictionary)
 `/cellar/users/f6zheng/Data/Public_data/chr_files_hg19`
 
+However, needs to be careful to find out whether the new studies uses hg19, it is possible that they use hg38
+
 
 
 # Obtaining the MAF files
