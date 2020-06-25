@@ -32,6 +32,8 @@ https://software.broadinstitute.org/cancer/cga/mutsig
 
 However, needs to be careful to find out whether the new studies uses hg19, it is possible that they use hg38
 
+(06.25) confirmed that the CPTAC cohort use GRch38 (hg38)
+
 
 
 # Obtaining the MAF files
