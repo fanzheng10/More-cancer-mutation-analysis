@@ -16,7 +16,7 @@ Usage (here breaking lines to show some clarity, don't break when actually run t
            'gene.covariates.txt',
            'output', 
            'mutation_type_dictionary_file.txt',
-           'chr_files_hg19');
+           'chr_files_hg38');
 quit"
 ```
 The input is a MAF file (e.g. `blca.maf`), which calls MutSigCV from MATLAB. `output` above specify an output directory. Other files are really big so there are not here but on the lab server. In the output directory there will be a file ending with "p1gp", which is the per-patient probability we are looking for.
@@ -28,11 +28,11 @@ https://software.broadinstitute.org/cancer/cga/mutsig
 ### the links of other files here
 
 `/cellar/users/f6zheng/work_2020_2/nest_confirmatory/n4wilson/mutsigcv_files` (contains coverage, covariates and dictionary)
-`/cellar/users/f6zheng/Data/Public_data/chr_files_hg19`
+`/cellar/users/f6zheng/Data/Public_data/chr_files_hg38`
 
 However, needs to be careful to find out whether the new studies uses hg19, it is possible that they use hg38
 
-(06.25) confirmed that the CPTAC cohort use GRch38 (hg38)
+confirmed that the CPTAC cohort use GRch38 (hg38);
 
 
 
