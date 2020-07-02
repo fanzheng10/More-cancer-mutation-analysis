@@ -34,6 +34,8 @@ However, needs to be careful to find out whether the new studies uses hg19, it i
 
 confirmed that the CPTAC cohort use GRch38 (hg38);
 
+Download from 
+Updates: need to convert the FASTA file downloaded from `https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/` to txt (remove header and newlines) before they can be used by MutSigCV.
 
 
 # Obtaining the MAF files
@@ -46,6 +48,24 @@ confirmed that the CPTAC cohort use GRch38 (hg38);
 </p>
 
 3. Concatenate MAF files. In theory, the MAF file should be able to be used as the input of the matlab code. 
+
+# Update Jul. 2
+
+## use p1gp file to calculate expectation
+is an M x N table; M patients are ordered as in `$type.patients.txt`; N genes are ordered as in `all_genes.txt`. 
+need to sum values over patients to get a value for each gene.
+
+
+## use MAF file to calculate observe
+use `Variant_Classification` column, keep the rows with these values `['Missense_Mutation', 'Nonsense_Mutation', 'Frame_Shift_Del', 'Frame_Shift_Ins', 'Splice_Site', 'Splice_Region', 'In_Frame_Del', 'In_Frame_Ins', 'Nonstop_Mutation']`
+
+## goal is to create two files like the following
+
+`/cellar/users/f6zheng/Data/human_cancer_hierarchy_submit/cancerdata/analyzed/mutsigcv_pancanatlas/mutsigcv1.4_pancanceratlas_observe.csv`
+
+`/cellar/users/f6zheng/Data/human_cancer_hierarchy_submit/cancerdata/analyzed/mutsigcv_pancanatlas/mutsigcv1.4_pancanceratlas_expect.csv`
+
+Substraction these two files is a little tricky to say it clearly here. Fan will take care.
 
 # Run HiSig
 
