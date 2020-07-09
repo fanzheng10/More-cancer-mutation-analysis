@@ -65,7 +65,7 @@ use `Variant_Classification` column, keep the rows with these values `['Missense
 
 `/cellar/users/f6zheng/Data/human_cancer_hierarchy_submit/cancerdata/analyzed/mutsigcv_pancanatlas/mutsigcv1.4_pancanceratlas_expect.csv`
 
-# Update 7.9
+# Update Jul.9
 
 Nicholas reported inconsistencies between , could be some gene names in MAF are not recognized.
 
