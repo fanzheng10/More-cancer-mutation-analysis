@@ -1,7 +1,7 @@
 # More-cancer-mutation-analysis
 Analysis of mutations in new cohorts after TCGA, such as ICGC, CPTAC and GENIE, using the tools developed in the NeST paper
 
-Sounds good as a student project
+TODO: once this document is getting long, move to wiki
 
 # MutSigCV 1.4
 
