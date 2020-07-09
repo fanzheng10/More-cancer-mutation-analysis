@@ -27,7 +27,7 @@ https://software.broadinstitute.org/cancer/cga/mutsig
 
 ### the links of other files here
 
-`/cellar/users/f6zheng/work_2020_2/nest_confirmatory/n4wilson/mutsigcv_files` (contains coverage, covariates and dictionary)
+`/cellar/users/f6zheng/work_2020/nest_confirmatory/n4wilson/mutsigcv_files` (contains coverage, covariates and dictionary)
 `/cellar/users/f6zheng/Data/Public_data/chr_files_hg38`
 
 However, needs to be careful to find out whether the new studies uses hg19, it is possible that they use hg38
@@ -65,11 +65,29 @@ use `Variant_Classification` column, keep the rows with these values `['Missense
 
 `/cellar/users/f6zheng/Data/human_cancer_hierarchy_submit/cancerdata/analyzed/mutsigcv_pancanatlas/mutsigcv1.4_pancanceratlas_expect.csv`
 
-Substraction these two files is a little tricky to say it clearly here. Fan will take care.
+# Update 7.9
 
-# Run HiSig
+Nicholas reported inconsistencies between , could be some gene names in MAF are not recognized.
+
+## Run HiSig
 
 See the repo of [HiSig](https://github.com/fanzheng10/HiSig) here. 
+
+Next step is running HiSig. Now HiSig does not require DDOT installation. Also by default it fits a Poisson (log-linear) regression instead of linear regression, so no need to worry about logarithms. For each gene, calculate `observe-expect`, and used as the input of HiSig (the `--sig` parameter for `prepare_input.py`).
+
+Also need a file from the NeST project, for the `--ont` parameter. Use this file:
+
+`/cellar/users/f6zheng/work_2020/nest_confirmatory/n4wilson/clixo_ccmi_20190527-164246_min4.ont`
+
+As a sanity check, in the meantime also use the `sample.ont` file provided in the HiSig repo. It is based on the cellular components annotations from the Gene Ontology.
+
+Estimate time: 3-7 hrs (seems to be longer after using Poisson?)
+
+Need special cares when submititng jobs to cluster. use `mem` and `cpu` parameters in the `Cluster.sbatch` function, set both to 8. Confirm the bash script to submit contains the following in the header:  
+#SBATCH --mem-per-cpu=8G  
+#SBATCH -c 8
+
+
 
 
 
