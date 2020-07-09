@@ -67,8 +67,6 @@ use `Variant_Classification` column, keep the rows with these values `['Missense
 
 # Update Jul.9
 
-Nicholas reported inconsistencies between , could be some gene names in MAF are not recognized.
-
 ## Run HiSig
 
 See the repo of [HiSig](https://github.com/fanzheng10/HiSig) here. 
@@ -84,6 +82,7 @@ As a sanity check, in the meantime also use the `sample.ont` file provided in th
 Estimate time: 3-7 hrs (seems to be longer after using Poisson?)
 
 Need special cares when submititng jobs to cluster. use `mem` and `cpu` parameters in the `Cluster.sbatch` function, set both to 8. Confirm the bash script to submit contains the following in the header:  
+
 #SBATCH --mem-per-cpu=8G  
 #SBATCH -c 8
 
