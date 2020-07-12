@@ -1,7 +1,7 @@
 # More-cancer-mutation-analysis
 Analysis of mutations in new cohorts after TCGA, such as ICGC, CPTAC and GENIE, using the tools developed in the NeST paper, and potentially in the HiDeF paper.
 
-# for details, and the project progress, please see the Wiki page.
+## for details, and the project progress, please see the Wiki page.
 https://github.com/fanzheng10/More-cancer-mutation-analysis/wiki
 
 # MutSigCV 1.4
